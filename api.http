@@ -1,0 +1,29 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": 123,
+  "details": null,
+  "maximumAttendees": 1
+}
+
+###
+POST http://localhost:3333/events/7e6830d7-df87-44ab-8887-f61c7626e71b/attendees
+Content-Type: application/json
+
+{
+  "name": "Vittor Pelicarto",
+  "email": "vittor3.pelicarto@gmail.com"
+}
+
+### 
+GET http://localhost:3333/events/7e6830d7-df87-44ab-8887-f61c7626e71b
+
+###
+GET http://localhost:3333/attendees/2/badge
+
+###
+GET http://localhost:3333/attendees/2/check-in
+
+###
+GET http://localhost:3333/events/7e6830d7-df87-44ab-8887-f61c7626e71b/attendees?query=vittor
